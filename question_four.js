@@ -28,13 +28,13 @@ class Stack {
 
 let stack = new Stack();
 stack.add(1);
+stack.add(3);
 stack.add(2);
 stack.add(4);
 stack.add(7);
 console.log(stack.items);
 
 stack.remove();
-this.items = [5];
 console.log(stack.items);
 
 console.log(stack.top());
@@ -44,13 +44,13 @@ console.log(stack.isEmpty());
 console.log(stack.size());
 
 const removeOdd = (myStack) => {
+    let evenStack = [];
     for (let j = 0; j < stack.size(); j++) {
-        if (myStack[j] % 2 === 1) {
-            myStack.splice(j, 1)
-            break;
+        if (myStack[j] % 2 === 0) {
+            evenStack.push(myStack[j]);
         };
     };
-    return myStack;
+    return evenStack;
 }
 resultStack = removeOdd(stack.items)
 console.log(resultStack);
@@ -62,5 +62,5 @@ const duplicateStack = (myStack) => {
     }
     return duplicate;
 }
-resultArray = duplicateStack(stack.items)
-console.log(resultArray);
+resultStack = duplicateStack(stack.items)
+console.log(resultStack);
