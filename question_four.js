@@ -43,17 +43,17 @@ console.log(stack.isEmpty());
 
 console.log(stack.size());
 
-const removeOdd = (myArray) => {
+const removeOdd = (myStack) => {
     for (let j = 0; j < stack.size(); j++) {
-        if (myArray[j] % 2 === 1) {
-            myArray.splice(j, 1)
+        if (myStack[j] % 2 === 1) {
+            myStack.splice(j, 1)
             break;
         };
     };
-    return myArray;
+    return myStack;
 }
-resultArray = removeOdd(stack.items)
-console.log(resultArray);
+resultStack = removeOdd(stack.items)
+console.log(resultStack);
 
 const duplicateStack = (myStack) => {
     let duplicate = new Stack();
